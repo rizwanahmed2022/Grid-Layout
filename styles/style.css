@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cantainer {
+  background-color: gray;
+  width: 95%;
+  margin: 5% auto;
+  border: 2px solid black;
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+}
+
+.children {
+  border-radius: 5px;
+}
+
+#child-1 {
+  background-color: rgb(255, 62, 62);
+}
+#child-2 {
+  background-color: rgb(255, 110, 62);
+}
+#child-3 {
+  background-color: rgb(188, 170, 40);
+}
+#child-4 {
+  background-color: rgb(4, 160, 217);
+}
+#child-5 {
+  background-color: rgb(19, 189, 251);
+}
+#child-6 {
+  background-color: rgb(53, 190, 240);
+}
+
+.btn-next {
+  position: absolute;
+  bottom: 50px;
+  right: 20%;
+  background-color: rgba(0, 0, 255, 0.746);
+  color: white;
+  padding: 9px 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px black;
+}
+.btn-back {
+  border-radius: 3px;
+  position: absolute;
+  bottom: 50px;
+  left: 20%;
+  background-color: rgba(255, 0, 0, 0.746);
+  color: white;
+  padding: 9px 30px;
+  font-size: 1.3rem;
+  border: none;
+}
+
+.btn-back:hover {
+  background-color: rgba(255, 0, 0, 0.953);
+}
+.btn-next:hover {
+  background-color: rgba(0, 0, 255, 0.921);
+}
+.btn-back:focus {
+  background-color: rgb(255, 0, 0);
+}
+.btn-next:focus {
+  background-color: rgb(0, 0, 255);
+}
+
+@media (max-width: 1000px) {
+  .cantainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    margin: 1% auto;
+  }
+}
+@media (max-width: 600px) {
+  .cantainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+}
